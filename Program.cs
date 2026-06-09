@@ -6,8 +6,15 @@
         {
 
             string Firstname, Lastname;
-            char ChoiceOfDifficulty;
-            String[] easyquestions = { "" };
+            char ChoiceOfDifficulty,replay ;
+            String[] easyquestions =
+    {
+            "What does 'Kia Ora' mean?\nA. Goodbye\nB. Hello\nC. Food\nD. Family",
+            "What does 'Whānau' mean?\nA. Ocean\nB. School\nC. Family\nD. Mountain",
+            "What does 'Kai' mean?\nA. Food\nB. Water\nC. House\nD. Tree",
+            "What does 'Moana' mean?\nA. River\nB. Forest\nC. Family\nD. Ocean",
+            "What does 'Ka Pai' mean?\nA. Bad\nB. Slow\nC. Good\nD. Fast"
+    };
             String[] mediumquestions = { "" };
             String[] hardquestions = { "" };
 
@@ -21,52 +28,58 @@
 
             do
             {
+
                 ChoiceOfDifficulty = DifficultyChoiceLevel();
                 switch (ChoiceOfDifficulty)
                 {
                     case 'E':
-                        Console.WriteLine("you have chosen easy difficulty");
+                        ShowQuestions(easyquestions);
                         break;
+
                     case 'M':
-                        Console.WriteLine("you have chosen medium difficulty");
+                        ShowQuestions(mediumquestions);
                         break;
+
                     case 'H':
-                        Console.WriteLine("you have chosen hard difficulty");
+                        ShowQuestions(hardquestions);
                         break;
+
                     default:
-                        Console.WriteLine("invalid choice, please try again");
+                        Console.WriteLine("Invalid choice");
                         break;
+
                 }
-                Console.WriteLine("Y for yes N for no");
-                ChoiceOfDifficulty = Console.ReadLine().ToUpper()[0];
-            } while (ChoiceOfDifficulty == 'Y');
-            case 'E':
-                Console.WriteLine("you have chosen easy difficulty");
-
-                for (int i = 0; i < easyquestions.Length; i++)
-                {
-                    Console.WriteLine(easyquestions[i]);
-                    Console.ReadLine(); 
-                }
-                break;
-
-            }
-
-            Console.WriteLine("Thank you for playing the Maori quiz, goodbye!");
 
 
-            static char DifficultyChoiceLevel()
+                Console.WriteLine("Thank you for playing the Maori quiz, goodbye!");
+                Console.WriteLine("Would you lie to play the quiz again");
+                replay = Console.ReadLine()[0];
+                Console.ReadLine();
+            } while (replay == 'Y');
+        }
+        static char DifficultyChoiceLevel()
+        {
+            Console.WriteLine("What difficulty level would you like to play?");
+            Console.WriteLine("E = Easy");
+            Console.WriteLine("M = Medium");
+            Console.WriteLine("H = Hard");
+
+            char choice = Console.ReadLine().ToUpper()[0];
+
+            return choice;
+        }
+        static void ShowQuestions(string[] questions)
+        {
+            for (int i = 0; i < questions.Length; i++)
             {
-                char choice;
-
-                Console.WriteLine("what difficulty level would you like to play? (E for easy, M for medium, H for hard)");
-                choice = Console.ReadLine().ToUpper()[0];
-                return choice;
+                Console.WriteLine();
+                Console.WriteLine(questions[i]);
 
             }
-        }     }  } 
-        
+        } } }
     
+
+
 
     
 
