@@ -15,8 +15,22 @@
             "What does 'Moana' mean?\nA. River\nB. Forest\nC. Family\nD. Ocean",
             "What does 'Ka Pai' mean?\nA. Bad\nB. Slow\nC. Good\nD. Fast"
     };
-            String[] mediumquestions = { "" };
-            String[] hardquestions = { "" };
+            String[] mediumquestions =
+{
+            "What is the Māori name for New Zealand?\nA. Aotearoa\nB. Moana\nC. Whānau\nD. Kai",
+            "What does 'Aroha' mean?\nA. Water\nB. Love\nC. Mountain\nD. House",
+            "What does 'Wai' mean?\nA. Food\nB. Tree\nC. Water\nD. Bird",
+            "What does 'Haere Mai' mean?\nA. Welcome\nB. Goodbye\nC. Family\nD. Ocean",
+            "What does 'Tamariki' mean?\nA. Adults\nB. Children\nC. Teachers\nD. Parents"
+};
+            String[] hardquestions =
+{
+            "What does 'Haere Rā' mean?\nA. Good morning\nB. Thank you\nC. Goodbye\nD. Welcome",
+            "What does 'Mana' mean?\nA. Prestige and respect\nB. Food\nC. Water\nD. School",
+            "What does 'Kōrero' mean?\nA. Walk\nB. Talk or speak\nC. Swim\nD. Run",
+            "What does 'Whare' mean?\nA. House\nB. Tree\nC. River\nD. Bird",
+            "What does 'Marae' refer to?\nA. A sports field\nB. A shopping centre\nC. A Māori meeting ground\nD. A mountain"
+};
 
             Console.WriteLine("Hello please enter your first name");
             Firstname = Console.ReadLine();
