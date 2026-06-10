@@ -15,6 +15,7 @@
             "What does 'Moana' mean?\nA. River\nB. Forest\nC. Family\nD. Ocean",
             "What does 'Ka Pai' mean?\nA. Bad\nB. Slow\nC. Good\nD. Fast"
     };
+            char[] easyanswers = { 'B', 'C', 'A', 'D', 'C' };
             String[] mediumquestions =
 {
             "What is the Māori name for New Zealand?\nA. Aotearoa\nB. Moana\nC. Whānau\nD. Kai",
@@ -23,15 +24,17 @@
             "What does 'Haere Mai' mean?\nA. Welcome\nB. Goodbye\nC. Family\nD. Ocean",
             "What does 'Tamariki' mean?\nA. Adults\nB. Children\nC. Teachers\nD. Parents"
 };
+            char[] mediumanswers = { 'A', 'B', 'C', 'A', 'B' };
             String[] hardquestions =
 {
+            
             "What does 'Haere Rā' mean?\nA. Good morning\nB. Thank you\nC. Goodbye\nD. Welcome",
             "What does 'Mana' mean?\nA. Prestige and respect\nB. Food\nC. Water\nD. School",
             "What does 'Kōrero' mean?\nA. Walk\nB. Talk or speak\nC. Swim\nD. Run",
             "What does 'Whare' mean?\nA. House\nB. Tree\nC. River\nD. Bird",
-            "What does 'Marae' refer to?\nA. A sports field\nB. A shopping centre\nC. A Māori meeting ground\nD. A mountain"
+            "What does 'Marae' refer to?\nA. A sports field\nB. A shopping centre\nC. A Māori meeting ground\nD. A mountain",
 };
-
+            char[] hardanswers = { 'C', 'A', 'B', 'A', 'C' };
             Console.WriteLine("Hello please enter your first name");
             Firstname = Console.ReadLine();
             Console.WriteLine("please enter your last name");
@@ -66,7 +69,7 @@
 
 
                 Console.WriteLine("Thank you for playing the Maori quiz, goodbye!");
-                Console.WriteLine("Would you lie to play the quiz again");
+                Console.WriteLine("Would you like to play the quiz again? (Y/N)");
                 replay = Console.ReadLine()[0];
                 Console.ReadLine();
             } while (replay == 'Y');
