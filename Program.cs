@@ -1,4 +1,6 @@
-﻿namespace MaoriQuiz
+﻿using System.Threading.Channels;
+
+namespace MaoriQuiz
 {
     internal class Program
     {
@@ -50,15 +52,15 @@
                 switch (ChoiceOfDifficulty)
                 {
                     case 'E':
-                        ShowQuestions(easyquestions);
+                        ShowQuestions(easyquestions, easyanswers);
                         break;
 
                     case 'M':
-                        ShowQuestions(mediumquestions);
+                        ShowQuestions(mediumquestions, mediumanswers);
                         break;
 
                     case 'H':
-                        ShowQuestions(hardquestions);
+                        ShowQuestions(hardquestions, hardanswers);
                         break;
 
                     default:
@@ -68,12 +70,14 @@
                 }
 
 
-                Console.WriteLine("Thank you for playing the Maori quiz, goodbye!");
                 Console.WriteLine("Would you like to play the quiz again? (Y/N)");
                 replay = Console.ReadLine()[0];
                 Console.ReadLine();
             } while (replay == 'Y');
+            Console.WriteLine("Thank you for palying my maori quiz bye");
+            Console.ReadLine();
         }
+        
         static char DifficultyChoiceLevel()
         {
             Console.WriteLine("What difficulty level would you like to play?");
@@ -85,20 +89,38 @@
 
             return choice;
         }
-        static void ShowQuestions(string[] questions)
+        static void ShowQuestions(string[] questions, char[] answers)
         {
+            int score = 0;
+
             for (int i = 0; i < questions.Length; i++)
             {
                 Console.WriteLine();
                 Console.WriteLine(questions[i]);
 
+                char userAnswer = Console.ReadLine().ToUpper()[0];
+
+                if (userAnswer == answers[i])
+                {
+                    Console.WriteLine("Correct!");
+                    score++;
+                }
+                else
+                {
+                    Console.WriteLine("Wrong!");
+                }
             }
-        } } }
-    
+
+            Console.WriteLine();
+            Console.WriteLine("Your score is " + score + "/" + questions.Length);
+        }
+    }
+}
 
 
 
-    
+
+
 
 
 
