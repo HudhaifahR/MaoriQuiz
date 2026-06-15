@@ -37,11 +37,13 @@ namespace MaoriQuiz
             "What does 'Marae' refer to?\nA. A sports field\nB. A shopping centre\nC. A Māori meeting ground\nD. A mountain",
 };
             char[] hardanswers = { 'C', 'A', 'B', 'A', 'C' };
+            Console.WriteLine("************************************************");
             Console.WriteLine("Hello please enter your first name");
             Firstname = Console.ReadLine();
             Console.WriteLine("please enter your last name");
             Lastname = Console.ReadLine();
             Console.WriteLine("Hello " + Firstname + " " + Lastname + "!");
+            Console.WriteLine("************************************************");
 
 
 
@@ -69,22 +71,24 @@ namespace MaoriQuiz
 
                 }
 
-
+                Console.WriteLine("************************************************");
                 Console.WriteLine("Would you like to play the quiz again? (Y/N)");
                 replay = Console.ReadLine()[0];
                 Console.ReadLine();
             } while (replay == 'Y');
             Console.WriteLine("Thank you for palying my maori quiz bye");
+            Console.WriteLine("************************************************");
             Console.ReadLine();
         }
         
         static char DifficultyChoiceLevel()
         {
+            Console.WriteLine("************************************************");
             Console.WriteLine("What difficulty level would you like to play?");
             Console.WriteLine("E = Easy");
             Console.WriteLine("M = Medium");
             Console.WriteLine("H = Hard");
-
+            Console.WriteLine("************************************************");
             char choice = Console.ReadLine().ToUpper()[0];
 
             return choice;
@@ -113,6 +117,9 @@ namespace MaoriQuiz
 
             Console.WriteLine();
             Console.WriteLine("Your score is " + score + "/" + questions.Length);
+            Console.WriteLine("************************************************");
+            Console.WriteLine("************************************************");
+
         }
     }
 }
