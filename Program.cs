@@ -6,9 +6,10 @@ namespace MaoriQuiz
     {
         static void Main(string[] args)
         {
-
+            // these are the variables for my program
             string Firstname, Lastname;
             char ChoiceOfDifficulty,replay ;
+            // these are the questions and answers for my program
             String[] easyquestions =
     {
             "What does 'Kia Ora' mean?\nA. Goodbye\nB. Hello\nC. Food\nD. Family",
@@ -37,7 +38,7 @@ namespace MaoriQuiz
             "What does 'Marae' refer to?\nA. A sports field\nB. A shopping centre\nC. A Māori meeting ground\nD. A mountain",
 };
             char[] hardanswers = { 'C', 'A', 'B', 'A', 'C' };
-            Console.WriteLine("************************************************");
+            // this is the start for my program where the user will enter their name`
             Console.WriteLine("Hello please enter your first name");
             Firstname = Console.ReadLine();
             Console.WriteLine("please enter your last name");
@@ -46,7 +47,7 @@ namespace MaoriQuiz
             Console.WriteLine("************************************************");
 
 
-
+            // this is the part where the user will choose the difficulty level and play the quiz
             do
             {
 
@@ -70,7 +71,7 @@ namespace MaoriQuiz
                         break;
 
                 }
-
+                // this is the part where the user will choose to play the quiz again or not
                 Console.WriteLine("************************************************");
                 Console.WriteLine("Would you like to play the quiz again? (Y/N)");
                 replay = Console.ReadLine()[0];
@@ -80,7 +81,7 @@ namespace MaoriQuiz
             Console.WriteLine("************************************************");
             Console.ReadLine();
         }
-        
+        // this is the method for the user to choose the difficulty level
         static char DifficultyChoiceLevel()
         {
             Console.WriteLine("************************************************");
@@ -93,6 +94,7 @@ namespace MaoriQuiz
 
             return choice;
         }
+        // this is the method for showing the questions and calculating the score
         static void ShowQuestions(string[] questions, char[] answers)
         {
             int score = 0;
@@ -114,7 +116,7 @@ namespace MaoriQuiz
                     Console.WriteLine("Wrong!");
                 }
             }
-
+            // this is the part where the user will see their score after answering all the questions
             Console.WriteLine();
             Console.WriteLine("Your score is " + score + "/" + questions.Length);
             Console.WriteLine("************************************************");
