@@ -7,8 +7,8 @@ namespace MaoriQuiz
         static void Main(string[] args)
         {
             // these are the variables for my program
-            string Firstname, Lastname;
-            char ChoiceOfDifficulty,replay ;
+            string name;
+            char ChoiceOfDifficulty, replay;
             // these are the questions and answers for my program
             String[] easyquestions =
     {
@@ -30,7 +30,7 @@ namespace MaoriQuiz
             char[] mediumanswers = { 'A', 'B', 'C', 'A', 'B' };
             String[] hardquestions =
 {
-            
+
             "What does 'Haere Rā' mean?\nA. Good morning\nB. Thank you\nC. Goodbye\nD. Welcome",
             "What does 'Mana' mean?\nA. Prestige and respect\nB. Food\nC. Water\nD. School",
             "What does 'Kōrero' mean?\nA. Walk\nB. Talk or speak\nC. Swim\nD. Run",
@@ -39,11 +39,9 @@ namespace MaoriQuiz
 };
             char[] hardanswers = { 'C', 'A', 'B', 'A', 'C' };
             // this is the start for my program where the user will enter their name`
-            Console.WriteLine("Hello please enter your first name");
-            Firstname = Console.ReadLine();
-            Console.WriteLine("please enter your last name");
-            Lastname = Console.ReadLine();
-            Console.WriteLine("Hello " + Firstname + " " + Lastname + "!");
+            Console.WriteLine("Hello please enter your name");
+            name = Console.ReadLine();
+            Console.WriteLine("Hello " + name + "!");
             Console.WriteLine("************************************************");
 
 
@@ -74,7 +72,7 @@ namespace MaoriQuiz
                 // this is the part where the user will choose to play the quiz again or not
                 Console.WriteLine("************************************************");
                 Console.WriteLine("Would you like to play the quiz again? (Y/N)");
-                replay = Console.ReadLine()[0];
+                replay = Console.ReadLine().ToUpper()[0];
                 Console.ReadLine();
             } while (replay == 'Y');
             Console.WriteLine("Thank you for palying my maori quiz bye");
